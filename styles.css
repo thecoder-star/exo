@@ -1,0 +1,225 @@
+/* Modern Minimalist Styling Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1100px;
+    background: #11141a;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Simplistic Header Search Block */
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    background: #1f232b;
+    border: 1px solid #2a2f3b;
+    padding: 16px;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #4f46e5;
+}
+
+.search-box button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.search-box button:hover {
+    opacity: 0.9;
+}
+
+/* Adaptive Split Layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left Panel: Music Player Card */
+.player-panel {
+    background: #191d26;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.art-wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.art-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-details h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.track-details p {
+    font-size: 14px;
+    color: #9aa0a6;
+    margin-bottom: 24px;
+}
+
+/* Progress & Timeline Controls */
+.timeline-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    font-size: 12px;
+    color: #9aa0a6;
+    margin-bottom: 20px;
+}
+
+.timeline-container input[type="range"] {
+    flex: 1;
+    accent-color: #4f46e5;
+    cursor: pointer;
+    height: 4px;
+}
+
+.controls {
+    width: 100%;
+}
+
+.play-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #0b0c10;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.play-btn:hover:not(:disabled) {
+    background: #e5e5e5;
+}
+
+.play-btn:disabled {
+    background: #2e3440;
+    color: #4c566a;
+    cursor: not-allowed;
+}
+
+/* Right Panel: Clean Scrollable Queue Card */
+.results-panel {
+    background: #191d26;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.results-list .empty-state {
+    color: #656d76;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Individual Interactive Item Cards */
+.music-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+}
+
+.music-item:hover {
+    background: #232936;
+}
+
+.item-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.item-info h4 {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-info p {
+    font-size: 13px;
+    color: #9aa0a6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
