@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Gauge.CSharp.Lib;
 using Gauge.CSharp.Lib.Attribute;
-using Shouldly;
+using Shouldly
 
 
 namespace DotNet.Template
